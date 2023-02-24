@@ -15,8 +15,19 @@
 # Вывод:
 # 1
 
-# n = int(input())
-# if 
+n = int(input())
+count_0 = 0
+count_1 = 0
+for i in range(n):
+    x = int(input())
+    if x == 0:
+        count_0 += 1
+    else:
+        count_1 += 1
+if count_1 > count_0:
+    print(count_0)
+else:
+    print(count_1)
 
 
 
@@ -58,6 +69,12 @@
 # Вывод
 # 1 2 4 8 16
 
+# n = int(input())
+# i = 1
+# while i <= n:
+#     print(i)
+#     i = 2**i
+    
 
 
 # Получить коментарии по дз: https://t.me/vlad6one
