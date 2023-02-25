@@ -10,6 +10,16 @@
 #     3
 #     -> 1
 
+# n = int(input('введите количество элементов в массиве, нажмите enter и введите все элементы массива через enter: ')) 
+# mass = []
+# for i in range(n):
+#     mass.append(int(input()))
+# x = int(input('Какое число ищем? '))
+
+# count = 0
+# for x in mass:
+#     count += 1
+# print(count)
 
 
 
@@ -19,6 +29,7 @@
 # натуральное число N – количество элементов в массиве. 
 # Последняя строка содержит число X
 
+
 # *Пример:*
 
 # 5
@@ -26,9 +37,19 @@
 #     6
 #     -> 5
 
+# from random import randint
+# n = int(input('введите количество элементов в массиве: ')) 
+# mass = []
+# for i in range(1,n+1):
+#     mass.append(randint(0,9))
+# print(mass)
 
-
-
+# x = int(input('введите любое число: ')) 
+# y = mass[0]
+# for i in range(0,len(mass)-1):
+#     if abs(mass[i]-x)<=abs(y-x):
+#         y = mass[i]
+# print (f'Ближайшее число в массиве к нашему числу: {y}')
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble)
 #  каждая буква имеет определенную ценность. В случае
@@ -47,3 +68,91 @@
 
 # ноутбук
 #     12
+
+x = input('введите 1 слово на русском или ангрлийском: ').split()
+count = 0
+spis1 = ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т']
+spis2 = ['D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У']
+spis3 = ['B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я']
+spis4 = ['F', 'H', 'V', 'W', 'Y', 'Й', 'Ы']
+spis5 = ['K', 'Ж', 'З', 'Х', 'Ц', 'Ч']
+spis8 = ['J', 'X', 'Ш', 'Э', 'Ю']
+spis10 = ['Q', 'Z', 'Ф', 'Щ', 'Ъ']
+x = ','.join(x)
+print(x)
+for i in range(0,len(x)):
+    if x[i].upper() in spis1:
+        count += 1
+    if x[i].upper() in spis2:
+        count += 2
+    if x[i].upper() in spis3:
+        count += 3
+    if x[i].upper() in spis4:
+        count += 4
+    if x[i].upper() in spis5:
+        count += 5
+    if x[i].upper() in spis8:
+        count += 8
+    if x[i].upper in spis10:
+        count += 10
+print()
+print(count)  
+
+
+# семинар
+
+# map(int,input().split())
+
+# Дан список чисел. Определите,
+#  сколько в нем встречается различных чисел.
+# 1 2 3 1 2 4 -> 4 (1 2 3 4)
+
+# list_ = []
+# n = 6
+# for i in range(n):
+#     list_.append(int(input()))
+# print()
+# print(len(set(list_)))
+
+# Дана последовательность из N целых чисел и число K.
+#  Необходимо сдвинуть всю последовательность 
+# (сдвиг - циклический) на K элементов вправо,
+# K – положительное число. 1 2 3 4 5 K = 3 -> 3 4 5 1 2
+
+# from random impirt randint
+# n = int(input('количество эт-ов в массиве: '))
+# k = int(input('сдвиг: '))
+# print(f'введите {n} элементов через enter ')
+# list_ = []
+
+# for i in range(n):
+#     list_.append(int(input())) # или list_.append(randint(0,9))
+# # list_ = [randint(0, 9) for i in range(n) ] #или так
+# print (list_)
+
+# for j in range(0,k):
+#     temp = list_.pop()
+#     list_.insert(0,temp)
+# print (list_)
+
+# Напишите программу для печати всех уникальных 
+# значений в словаре. { 1:2, 3:4 , 2:2 } -> 4,2
+
+
+# r={ 1: 4, 2: 4, 3: 2}
+# list_ = []
+# for item in r:
+#     list_.append(r[item])
+# print(set(list_))
+
+# Дан массив, состоящий из целых чисел. Напишите программу,
+#  которая подсчитает количество элементов массива, больших 
+# предыдущего (элемента с предыдущим номером)
+# 1 2 3 4 3 2 1 -> 3 (2 , 3 , 4)
+
+# mass = [1, 2, 3, 4, 3, 2, 1]
+# count = 0
+# for i in range(len(mass)-1):
+#     if mass[i] < mass[i+1]:
+#         count += 1
+# print(count)
