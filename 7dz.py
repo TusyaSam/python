@@ -39,8 +39,9 @@
 # Sample Output:
 # ((house, дом), (car, машина), (men, человек), (tree, дерево))
 
-# i = int(input('Введите количество пар ключей: '))
-# tp = list(map(i for i in range(1,i)))
+list = input().split()
+res = tuple(map(lambda x: tuple(x.split('=')), list))
+print(res)
 
 
 
